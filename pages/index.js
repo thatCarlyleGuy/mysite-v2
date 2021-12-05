@@ -58,7 +58,7 @@ const SellingPointsSection = ({ sellingPoints }) => (
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {sellingPoints.map(({ title, text, iconName }) => (
           <div className="bg-gray-50 px-8 py-10 rounded-md" key={title}>
-            <div className="w-20 py-6 flex justify-center bg-blue-100 text-gray-500 rounded-md mb-4">
+            <div className="w-20 py-6 flex justify-center bg-blue-100 text-gray-500 rounded-md mb-4 mx-auto md:mx-0">
               <FeatherIcon name={iconName} />
             </div>
 
@@ -293,7 +293,7 @@ const ContactMeFooter = ({ contactMe }) => (
       </div>
     </div>
 
-    <p className="text-gray-700 -mb-5 pt-20">
+    <p className="text-gray-700 -mb-5 pt-20 pl-10">
       &copy; {currentYear()} Carlyle Ruiters
     </p>
   </footer>
