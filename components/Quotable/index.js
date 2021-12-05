@@ -1,13 +1,10 @@
-import Image from 'next/image';
-
 const Quotable = ({ imageUrl, text, author }) => (
   <>
     <div className="inline-block relative w-40 h-40 overflow-hidden rounded-full">
-      <Image
+      <img
         className="w-full h-auto filter grayscale"
         src={'/' + imageUrl}
         alt="quote"
-        layout="fill"
       />
     </div>
 

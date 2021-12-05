@@ -3,18 +3,12 @@ import markdownToHtml from '../lib/markdownToHtml';
 import FeatherIcon from '../components/FeatherIcon';
 import Quotable from '../components/Quotable';
 import { currentYear, numberOfYearsSince } from '../lib/dates';
-import Image from 'next/image';
 
 const HeroSection = ({ hero: { navbar, person } }) => (
   <section className="py-5 md:py-10 md:py-16">
     <div className="container max-w-screen-xl mx-auto px-4">
       <nav className="flex items-center justify-between mb-0 md:mb-20">
-        <Image
-          className="w-40 -ml-10"
-          src={navbar.logoLink}
-          alt="Logo"
-          layout="fill"
-        />
+        <img className="w-40 -ml-10" src={navbar.logoLink} alt="Logo" />
         <a
           className="px-7 py-3 md:px-9 md:py-4 bg-white font-medium md:font-semibold text-gray-700 text-md rounded-md bg-blue-100 hover:bg-gray-700 hover:text-white transition ease-linear duration-500"
           href={navbar.resumeLink}
@@ -27,11 +21,10 @@ const HeroSection = ({ hero: { navbar, person } }) => (
       <div className="text-center">
         <div className="flex justify-center mb-12">
           <div className="inline-block relative w-64 h-64 overflow-hidden rounded-full">
-            <Image
+            <img
               className="w-full h-auto filter grayscale"
               src={'/' + person.imageLink}
               alt="face"
-              layout="fill"
             />
           </div>
         </div>
@@ -157,10 +150,9 @@ const ExperienceSection = ({ experience }) => (
             <div className="grid grid-cols-1 md:grid-cols-5">
               <div className="mx-3 lg:mr-10 col-span-1 md:col-span-3 flex flex-col lg:flex-row">
                 <div className="rounded-md w-20 h-20 my-auto mx-auto lg:mx-0 lg:mr-5">
-                  <Image
+                  <img
                     className="rounded-2xl"
                     src={exp.logo}
-                    layout="fill"
                     alt="company logo"
                   />
                 </div>
