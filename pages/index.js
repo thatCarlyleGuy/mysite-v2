@@ -3,6 +3,7 @@ import markdownToHtml from '../lib/markdownToHtml';
 import FeatherIcon from '../components/FeatherIcon';
 import Quotable from '../components/Quotable';
 import { currentYear, numberOfYearsSince } from '../lib/dates';
+import Head from 'next/head';
 
 const HeroSection = ({ hero: { navbar, person } }) => (
   <section className="py-5 md:py-10 md:py-16">
@@ -303,14 +304,20 @@ export const MainContent = ({ content }) => {
   const { hero, projects, contactMe, aboutMe, experience } = content;
 
   return (
-    <div className="px-5 sm:px-10 lg:px-16 bg-gray-100">
-      <HeroSection hero={hero} />
-      <SellingPointsSection sellingPoints={hero.sellingPoints} />
-      <AboutMeSection aboutMe={aboutMe} />
-      <ExperienceSection experience={experience} />
-      <ProjectsSection projects={projects} />
-      <ContactMeFooter contactMe={contactMe} />
-    </div>
+    <>
+      <Head>
+        <title>thatcarlyleguy</title>
+      </Head>
+
+      <div className="px-5 sm:px-10 lg:px-16 bg-gray-100">
+        <HeroSection hero={hero} />
+        <SellingPointsSection sellingPoints={hero.sellingPoints} />
+        <AboutMeSection aboutMe={aboutMe} />
+        <ExperienceSection experience={experience} />
+        <ProjectsSection projects={projects} />
+        <ContactMeFooter contactMe={contactMe} />
+      </div>
+    </>
   );
 };
 
